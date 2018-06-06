@@ -1,18 +1,36 @@
+NB :Tous les paramètres nécessaires sont passés en get 
+
 /start 
+
 démarrage d’une nouvelle enchères : mise à 0 du prix
 input: Temps imparti à l’enchère 
-output:  enchere_id
+output:  Json file { 
+                    message: "enchere_id "
+                    ,error : "if price not define"
+                   }
 
 /getactualprice/<int:id_enchere>'
+
 input: enchere_id
-output: prix actuel
+output: Json file {
+                    client:"name"
+                    error : "if id is null or if the bid is finish"
+                    price :  "current price"
+                  }
 
 /bid
+
 input: enchere_id,prix,client_name
-ouput: it depends
-if temps imparti fini returns FINISHED
-if temps imparti pas fini returns OK
+ouput: Json file {
+                    error:"if miss, wrong paramaters or the bid is finished"
+                    message: "success if not error"
+                  }
 
 /getwinner
+
 input: enchere_id
-ouput: client_name, prix final
+ouput:  Json file {
+                    error: "if the bid is not finished or wrong bid id
+                    name :  " winner's client_name "
+                    price:  " prix final "
+                   }
