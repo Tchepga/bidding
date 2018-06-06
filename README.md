@@ -8,6 +8,10 @@ cd .. ; docker build -t qopius/challenge:python-2.7 .
 ## To run it
 docker run --net host qopius/challenge:python-2.7
 
+docker run --net host -e PORT xxxx qopius/challenge:python-2.7
+
+docker run -e PORT xxxx:yyyy qopius/challenge:python-2.7
+
 The ENV variables for the doker images are: RANDOMIZER_LOWER_VALUE; RANDOMIZER_LOWER_VALUE;IP; PORT
 
 
