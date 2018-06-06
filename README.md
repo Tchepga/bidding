@@ -27,3 +27,7 @@ curl -X GET http://104.198.205.151/getactualprice/<id>
 curl -X GET http://104.198.205.151/getwinner/<id>
  
 
+
+## To follow the bet in real-time
+
+Check the logs of the server with contained detailed information about every update of the bid.
