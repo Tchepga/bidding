@@ -1,7 +1,7 @@
 /start 
 démarrage d’une nouvelle enchères : mise à 0 du prix
 input: Temps imparti à l’enchère 
-output:  enchere_id
+output:  enchere_id sd
 
 /getactualprice/<int:id_enchere>'
 input: enchere_id
